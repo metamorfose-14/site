@@ -1,26 +1,354 @@
-
-
+<!-- [  ] ================================================================== -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Titulo</title>
-    <link rel="icon" href="src/favicon.svg" type="image/svg+xml">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cs.css">
-</head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="assets/img/icons/favicon.webp" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Dosis:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/css.css">
+  <style>
+			player-placeholder {
+				display: flex;
+				position: relative;
+				padding-bottom: 56.25%; 
+				width: 100%;
+				height: 0;
+			}
+
+			player-theater-container { /* yt original */
+				position: relative;
+				width: 100%;
+				height: 56.25vw;
+				max-height: calc(100vh - 169px);
+				min-height: 480px;
+				background: #000;
+			}
+
+			.cinema-mode {
+				height: 560px !important;
+			}
+
+			/* //1 ---------------------------- */
+
+			/* 2 ----------------------------- */
+			player-placeholder #player,
+			player-placeholder embed, 
+			player-placeholder object {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+
+			player-container {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+			}
+
+			/* // 2 ----------------------------- */
+			
+			tacaOPal, tacaOPause {
+				display: grid;
+				place-items: center;
+				width: 13vw;
+				height: 8vw;
+				border-radius: 5vw;
+				border: solid 5px darkred;
+				background: rgb( 174 0 0 );
+				color: aqua;
+				font-size: 1.5rem;
+				font-weight: 900;
+				transition: .3s;
+			}
+			tacaOPal:hover, tacaOPause:hover {
+				background: rgb( 0 0 174 );
+				transition: .3s;
+			}
+			/* yt-button
+			---------------------------------- */
+			.ytp-large-play-button {
+				width: 68px;
+				height: 48px;
+				cursor: pointer;
+				border: none;
+				background-color: transparent;
+				padding: 0;
+				font-size: 100%;
+				-webkit-transition: opacity .25s cubic-bezier(0,0,0.2,1);
+				transition: opacity .25s cubic-bezier(0,0,0.2,1);
+				opacity: 0;
+				position: absolute;
+				top: 50%;left: 50%;
+				transform: translate( -50%, -50% );
+			}
+			
+			.ytp-large-pause-button {
+				z-index: 104;
+				width: 68px;
+				height: 48px;
+				cursor: pointer;
+				border: none;
+				background-color: transparent;
+				padding: 0;
+				font-size: 100%;
+				-webkit-transition: opacity .25s cubic-bezier(0,0,0.2,1);
+				transition: opacity .25s cubic-bezier(0,0,0.2,1);
+				opacity: 0;
+				z-index: 104;
+				display: none;
+				position: absolute;
+				top: 50%;left: 50%;
+				transform: translate( -50%, -50% );
+			}
+			
+			.enable-Btn { display: inline-block; }
+			.disable-Btn { display: none; }
+			/* tela
+			------------------------------ */
+			tela-quente {
+				opacity: 0;
+				position: absolute;
+				background: #0000ff50;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 110;
+				transition: .2s;
+			}
+			tela:hover {
+				opacity: 1;
+				transition: .2s;
+			}
+			sessaoDaTarde {
+				opacity: 1;
+				position: absolute;
+				background: rgb(218 65 32 /.0);
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 110;
+				transition: .2s;
+				cursor: pointer;
+			}
+			sessaoDaTarde:hover ~ .ytp-large-play-button {
+				opacity: 1;
+			}
+			sessaoDaTarde:hover ~ .ytp-large-play-button svg .ytp-large-play-button-bg {
+				fill: #f00;
+			}
+
+			sessaoDaTarde:active ~ .ytp-large-play-button,
+			sessaoDaTarde:active ~ .ytp-large-pause-button {
+				transition: all .5s;;
+				opacity: 1;
+			}
+
+			.invisivel { opacity: 0; }
+			.visivel { opacity: 1; }
+  </style>
+  
+
+  <title>Metamorfose 14</title>
+
+</head> 
 <body>
-    <appbar></appbar>
-    
-    <drawer></drawer>
-    
-    <home></home>
-    
-    <footer></footer>
-    
-    
-    <script src="src/assets/script/js.js"></script>
+
+
+  <header>
+  <scaffold>
+    <hd-crd>
+      <hd-crd-bg>
+
+        <!-- <img class="ultrascrt" src="assets/img/ultrasecreto.svg"> -->
+        <img class="ultrascrt" src="assets/img/confidencial.webp">
+
+        <hdln><b>Essa é a importancia do conhecimento</b></hdln>
+
+      </hd-crd-bg>
+    </hd-crd>
+  </scaffold>
+</header>
+
+<placeholder>
+  <scaffold>
+    <hd-crd>
+      <plr-card>
+
+      <player-placeholder>
+        <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+        <div id="player"></div>
+        <tela-quente></tela-quente>
+        <sessaoDaTarde onclick="sessaoDaTarde();"></sessaoDaTarde>
+        <!-- <button onclick="soltaOPlay();" class="change-Play-Btn-State ytp-large-play-button ytp-button play" aria-label="Reproduzir"> -->
+        <button class="ytp-large-play-button enable-Btn" aria-label="Reproduzir">
+          <svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
+            <path class="ytp-large-play-button-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#ff000099"></path>
+            <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+          </svg>
+        </button>
+        <!-- <button onclick="tacaOPause();" class="change-Pause-Btn-State ytp-large-play-button ytp-button pause" aria-label="Reproduzir"> -->
+        <button class="ytp-large-pause-button disable-Btn invisivel" aria-label="Reproduzir">
+          <svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
+           <defs
+            id="defs64" />
+           <path
+            class="ytp-large-pause-button-bg"
+            d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+            fill="#f00"
+            id="path56" />
+           <path
+            d="M 31.550462,33.941004 31.558289,14.061785 25,14 v 20"
+            fill="#ffffff"
+            id="path58" />
+           <path
+            d="M 42.952707,33.941004 42.960534,14.061785 36.402245,14 v 20"
+            fill="#ffffff"
+            id="path484" />
+          </svg>
+        </button>
+      </player-placeholder>
+  
+      </plr-card>
+    </hd-crd>
+  </scaffold>
+</placeholder>
+
+
+<rodape>
+  <scaffold>
+    <row>
+      <column>
+        <pp-card-top class="flexc">
+          <img src="assets/img/icons/favicon.webp" alt="ico" width="56">
+          <metamorfose14>Metamorfose<c>14</c> ®</metamorfose14>
+        </pp-card-top>
+        Este site não faz parte do site do Facebook ou Facebook Inc. Este site NÃO é endossado pelo Facebook de forma alguma. FACEBOOK é uma marca comercial da FACEBOOK, Inc.
+      </column>
+    </row>
+  </scaffold>
+</rodape>
+
+<!-- ------------------------------------------------------------- -->
+<footer>
+  <termos>
+    <a href="termos-de-uso.html">Termos de Uso</a>
+     | 
+    <a href="politicas.html">Política de Privacidade</a>
+  </termos>
+</footer>
+
+<script>
+  // 2. This code loads the IFrame Player API code asynchronously.
+  var tag = document.createElement('script');
+  var sessaoStateChange = 0;
+
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // 3. This function creates an <iframe> (and YouTube player)
+  //    after the API code downloads.
+  var player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '390',
+      width: '640',
+      videoId: 'JH0FYw_U_-M',
+      playerVars: {
+        'playsinline': 1,
+        'controls': 0,
+        'modestbranding': 1,
+        'rel': 0,
+        'autoplay': 1,
+        'disablekb': 1
+      },
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+      }
+    });
+  }
+
+  // 4. The API will call this function when the video player is ready.
+  function onPlayerReady(event) {
+    event.target.playVideo();
+  }
+
+  // 5. The API calls this function when the player's state changes.
+  //    The function indicates that when playing a video (state=1),
+  //    the player should play for six seconds and then stop.
+  var done = false;
+  function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PLAYING && !done) {
+      // setTimeout(stopVideo, 6000);
+      done = true;
+    }
+  }
+  function stopVideo() {
+    player.stopVideo();
+  }
+/* 
+  function soltaOPlay() {
+    player.playVideo();
+  } */
+
+  function soltaOPlay() {
+    document.querySelector( ".ytp-large-play-button" ).classList.toggle( "disable-Btn" );
+    document.querySelector( ".ytp-large-pause-button" ).classList.toggle( "enable-Btn" );
+    player.playVideo();
+  }
+  
+  function tacaOPause() {
+    document.querySelector( ".ytp-large-play-button" ).classList.toggle( "disable-Btn" );
+    document.querySelector( ".ytp-large-pause-button" ).classList.toggle( "enable-Btn" );
+    player.pauseVideo();
+  }
+
+  function sessaoDaTarde() {
+    // var sessaoStateChange;
+    switch(sessaoStateChange) {
+      case 0:
+        // document.querySelector( ".ytp-large-play-button" ).classList.toggle( "disable-Btn" );
+        // document.querySelector( ".ytp-large-pause-button" ).classList.toggle( "enable-Btn" );
+        player.playVideo();
+        sessaoStateChange = 1;
+        document.querySelector( ".ytp-large-pause-button" ).classList.replace( "invisivel", "visivel" );
+        document.querySelector( ".ytp-large-play-button" ).classList.replace( "enable-Btn", "disable-Btn" );
+        document.querySelector( ".ytp-large-pause-button" ).classList.replace( "disable-Btn", "enable-Btn" );
+        setTimeout(paused, 800);
+        function paused() {
+          document.querySelector( ".ytp-large-pause-button" ).classList.replace( "visivel", "invisivel" );
+        }
+        // document.getElementsByClassName( ".ytp-large-play-button" )
+        break;
+      case 1:
+        // document.querySelector( ".ytp-large-play-button" ).classList.toggle( "disable-Btn" );
+        // document.querySelector( ".ytp-large-pause-button" ).classList.toggle( "enable-Btn" );
+        player.pauseVideo();
+        sessaoStateChange = 0;
+        document.querySelector( ".ytp-large-pause-button" ).classList.replace( "invisivel", "visivel" );
+        document.querySelector( ".ytp-large-pause-button" ).classList.replace( "enable-Btn", "disable-Btn" );
+        document.querySelector( ".ytp-large-play-button" ).classList.replace( "disable-Btn", "enable-Btn" );
+        break;
+    }
+  }
+
+</script>
+
+    <script type="text/javascript">
+      setTimeout(() => {document.getElementById("cta1").classList.remove("d-none")}, 0); // 1637000); // temporização da Call to Action (em milissegundos)
+    </script>
+    <script src="assets/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="assets/js/script.js"></script>   
 </body>
 </html>
