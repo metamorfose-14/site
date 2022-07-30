@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,700;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Tangerine:wght@400;700&display=swap');
+    *, *::before, *::after {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    font-family: "Poppins";
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
+      background: url("../assets/img/wall/b5.webp");
+      background-color: rgba(0, 0, 0, 0.6);
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      background-blend-mode: darken;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .container {
+      width: 700px;
+      max-width: 90%;
+    }
+    .bck {
+      background-color: #fff5;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      margin: 16px 0;
+      padding: 10px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0 0 10px 2px;
+    }
+    .answ {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 10px;
+    }
+    .rodape {
+      text-align: center; font-weight: bold;
+      color: #bbb;
+      text-shadow: #000 0 0 9px;
+    } .rodape a { text-decoration: none; color: #bbb; text-shadow: #000 0 0 9px; }
+    @media (max-width: 991px) {
+      .answ {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        gap: 10px;
+      }
+    }
+    .btn {
+      border-radius: 10px;
+      padding: 5px 10px;
+      font-size: 30px;
+      background-color: #00a8ff;
+      outline: none;
+      text-decoration: none;
+      color: black;
+    }
+    .bck h1 {
+      color: black;
+      padding: 18px
+    }
+    .bck p {
+      font-size: 18px;
+      padding: 18px;
+      text-shadow: #000c 0 0 12px;
+    }
+    .hide {
+      display: none;
+    }
+  </style>
+
+  <!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1753145135030038');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1753145135030038&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body> 
+  <div class="container">
+    <div class="bck">
+      <div id="res1">
+        <div class="question">
+          <h1>Pergunta 1</h1>
+          <p>Deseja realmente quer descobrir esse segredo?</p>
+        </div>
+        <div class="answ">
+          <button class="btn" onclick="res2()">SIM</button>
+          <button class="btn" onclick="res2()">NÃO</button>
+        </div>
+      </div>
+      <div id="res2" class="hide">
+        <div class="question">
+          <h1>Pergunta 2</h1>
+          <p>Promete não revelar para ninguém?</p>
+        </div>
+        <div class="answ">
+          <button class="btn" onclick="res3()">SIM</button>
+          <button class="btn" onclick="res3()">NÃO</button>
+        </div>
+      </div>
+      <div id="res3" class="hide">
+        <div class="question">
+          <h1>Pergunta 3</h1>
+          <p>O vídeo a seguir possui um limite de compartilhamento para pouquíssimas pessoas verem ao mesmo tempo... Você pretende ver até o fim?</p>
+        </div>
+        <div class="answ">
+          <button class="btn" onclick="window.open(star, '_self');">SIM</button>
+          <button class="btn" onclick="window.open(star1, '_self');">NÃO</button>
+        </div>
+      </div>
+    </div>
+    <div class="rodape">
+      <p>
+        © 2021 – Todos os direitos reservados. Este site não faz parte do site do Facebook ou Facebook Inc. Este site NÃO é endossado pelo Facebook de forma alguma. FACEBOOK é uma marca comercial da FACEBOOK, Inc.
+      </p>
+      <p"><a href="../termos-de-uso.html">Termos de Uso</a> | <a href="../politicas.html">Política de Privacidade</a></p> 
+    </div> 
+  </div> 
+  <script> 
+    function res2() { 
+      document.getElementById("res1").classList.add("hide") 
+      document.getElementById("res2").classList.remove("hide") 
+    } 
+    function res3() { 
+      document.getElementById("res2").classList.add("hide") 
+      document.getElementById("res3").classList.remove("hide") 
+    } 
+    const pr = "/metamorfose";
+    const rp = "14.";
+    const rpcr = "co";
+    const rpcrp = "m.b";
+    const rpdc = "r";
+    const den = "ht";
+    const ner = "s:";
+    const star = `${den}tp${ner}/${pr}${rp}${rpcr}${rpcrp}r`;
+    const star1 = `${den}tp${ner}/${pr}${rp}${rpcr}${rpcrp}${rpdc}`;
+  </script> 
+</body> 
+</html> 

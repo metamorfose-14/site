@@ -112,13 +112,16 @@ plr-card {
 placeholder {
     display: block;
     /* background: #f009; */
+    box-shadow: #0005 0 5px 10px;
     position: sticky;
     top: 0;
     z-index: 99;
 }
 
-headerbtn { display: block; margin: 16px 0;}
-.cardb { display: block; margin: 46px 0;}
+headerbtn { margin: 16px 0;}
+.headerbtn { display: none; }
+.cardb { display: none; margin: 46px 0;}
+.cardb1 { display: none; margin: 46px 0;}
 
 /* ---------------------------------------------
 [ COMENTÁRIOS ] */
@@ -317,7 +320,7 @@ flex-column {
 /* [ bonus ] --------------------------------------] */
 
 bonus {
-    display: block;
+    display: none;
     background: linear-gradient( to bottom, #dcdcde, #f7f7f8 );
 }
 
@@ -464,6 +467,7 @@ mrgn-bttn {
     display: flex; align-items: center;
     flex-direction: column;
 }
+#aboutme { display: none; }
 .aboutme > img {
     width: 100%;
 }
@@ -527,18 +531,19 @@ sobremin-t {
 
 /* [ block-2 ] ---------------------------------------- */
 aboutme {
-    display: block;
+    display: none;
     padding-top: 1.5rem !important;
 }
 
 /* [ provasocial ] ---------------------------------------- */
 provasocial {
-    display: block;
+    display: none;
     /* background: #242a2a; */
     background: #f7f7f8;
     padding-bottom: 1.5rem !important;
     padding-top: 1.5rem !important;
 }
+#provasocial, #provasocial1 { display: none; }
 .provasocial { text-align: start; padding: 0 22px; color: #345; text-shadow: #0005 -2px 2px 2px; }
 pp-card {
     display: block;
@@ -588,7 +593,7 @@ pp-card-footer {
 }
 /* ------------------------------------- */
 como-funciona {
-    display: block;
+    display: none;
     background: linear-gradient( to bottom, #f7f7f8, #dcdcde );
     padding-bottom: 1.5rem !important;
     padding-top: 1.5rem !important;
@@ -636,7 +641,7 @@ metamorfose14 {
 b2 { font-size: 1.5rem; font-weight: bold; }
 /* [ garantia ] ---------------------------------------- */
 garantia {
-    display: block;
+    display: none;
     background: linear-gradient( to bottom, #f7f7f8, #232629 );
     padding-bottom: 1.5rem !important;
     padding-top: 1.5rem !important;
@@ -663,6 +668,7 @@ rodape {
     padding-bottom: 24px;
     background: #232629;
 }
+#rodape-m14 { display: none; }
 /* -----------------------------------------------
 [ FOOTER ] */
 footer {
@@ -675,6 +681,10 @@ footer {
 
 termos {
     padding: 16px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
 }
 termos a {
     margin: 0 16px;

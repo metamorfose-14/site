@@ -256,7 +256,7 @@ body {
 }
 
 body.darkbg {
-    background: url('../images/concrete_wall.jpg') 0 0 repeat #303539;
+    background: url('../../assets/img/wall/b5.webp') 0 0 repeat #303539;
 }
 
 .wrapper {
