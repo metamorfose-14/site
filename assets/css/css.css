@@ -32,9 +32,7 @@ body {
     text-align: left;
     background-color: #fff;
     color: white;
-    /* background-image: url(../img/bg.jpeg); */
-    /* background-image: url(../img/wall/bg10.webp); */
-    background-image: url(../img/wall/b5.webp);
+    background-image: url(../img/wall/5.jpg);
     background-color: rgba(0, 0, 0, 0.6);
     background-position: center;
     background-size: cover;
